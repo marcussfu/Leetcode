@@ -1,11 +1,9 @@
 # Two Sum
-難度: Easy
+難度: Easy (javascript)
 
 題目: 給一個 integer陣列和一個 integer target，陣列中任兩個值相加等於target，回傳這兩個值的index。
 
 注意: 同一個項目不能重覆加
-
-(javascript)
 
 Example:
 ```
