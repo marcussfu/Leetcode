@@ -65,6 +65,7 @@ class Solution:
 但也很明顯的，使用遞迴的時間複雜度為O(nlogn)
 
 另外可以用動態規劃(Dynamic Programming)和記憶法(memorization)來處理
+
 javascript
 ```
 var fib = function(n) {
