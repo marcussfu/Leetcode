@@ -30,6 +30,7 @@ Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 - "nums[count++] = nums[i]" 假設count目前為0，會先存到nums的0的位置，再++
 - 這樣的做法就是為了取得目前不重覆的數量，和把不重覆的值填入目前不重覆的數量index
 
+javascript
 ```
 var removeDuplicates = function(nums) {
     let last = null;
@@ -42,4 +43,16 @@ var removeDuplicates = function(nums) {
     }
     return count;
 }
+```
+
+python
+```
+def removeDuplicates(self, nums: [Int]) -> Int:
+    last, count = None, 0
+    for (i in range(len(nums))):
+        if (nums[i] !== last):
+            last = nums[i]
+            nums[count] = last
+            count += 1
+    return count
 ```
