@@ -30,18 +30,29 @@ var twoSum = function(nums, target) {
 
 因為在每次迴圈都會拿目前index的值去比對Hash Table裡有沒有符合的，有的話就可以回傳結果了。
 
-
+javascript
 ```
 var twoSum = function(nums, target) {
-    const seen = {};
+    let hashmap = {};
     for (let i=0;i<nums.length;i++) {
-        const another = target - nums[i];
-        if (another in seen) {
-            return [seen[another], i];
+        let complement = target-nums[i];
+        if (complement in hashmap) {
+            return [i, hashmap[complement]];
         }
-        seen[nums[i]] = i;
+        hashmap[nums[i]] = i;
     }
-    return null;
-}
+};
 ```
-這樣的時間複雜度為O(n)，而"if (another in seen) {"這邊的時間複雜度為O(1)
+
+python
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = {}
+        for i in range(len(nums)):
+            another = target - nums[i]
+            if another in dic:
+                return [i, dic[another]]
+            dic[nums[i]] = i
+```
+這樣的時間複雜度為O(n)，而"if (complement in hashmap) {"這邊的時間複雜度為O(1)
