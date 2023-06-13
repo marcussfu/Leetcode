@@ -6,4 +6,4 @@
 
 二進位搜尋法的時間複雜度是O(log n)
 
-可以看Easy的35題。
+35. Search Insert Position
